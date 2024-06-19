@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoinUP!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/panel.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/tarifs.css">
+    <link rel="stylesheet" href="/static/input.css">
+    <link rel="shortcut icon" href="/static/main.png" type="image.png">
+</head>
+{% block header %}
+{% endblock %}
+<body>
+<div style="color: white;">
+<h1 style="text-align: center; margin-top: -200px;">ПОВНА ІНФОРМАЦІЯ ПРО ВАШЕ ЗАМОВЛЕННЯ:</h1>
+<h3 style="margin-top: 100px; text-align: center;">Ім'я: {{ user_queries.o_name_1 }} {{ user_queries.o_name_2 }} {{ user_queries.o_name_3 }}</h3>
+<h3 style="margin-top: 20px; text-align: center;">Пошта: {{ user_queries.o_email }}</h3>
+<h3 style="margin-top: 50px; text-align: center;">Місце: {{ user_queries.o_place }}</h3>
+<h3 style="margin-top: 20px; text-align: center;">Житло: {{ user_queries.o_house }}</h3>
+<h3 style="margin-top: 20px; text-align: center;">Час: {{ user_queries.o_time }}</h3>
+<h3 style="margin-top: 20px; text-align: center;">Особи: {{ user_queries.o_people }}</h3>
+<h3 style="margin-top: 20px; text-align: center;">Транспорт: {{ user_queries.o_transport }}</h3>
+<h1 style="margin-top: 70px; text-align: center; color:yellow">СУМА ДО СПЛАТИ: </h1><h1 style="margin-left: 50px; margin-right: 50px; text-align: center; text-decoration:underline">{{ user_queries.o_sum }}грн</h1>
+</div>
+<div style="color: white; position: absolute; right: 100px;"><h3 style="margin-top: 20px;"><b>Дата: {{ currentDate }}</b></h3></div>
+<div style="height: 200px;"></div>
+<h2 style="color: white; text-align: center;">Протягом тижня наш менеджер зв'яжеться з Вами через пошту, що вказана вище.</h2>
+<div style="height: 200px;"></div>
+</body>
+{% extends "base.html" %}

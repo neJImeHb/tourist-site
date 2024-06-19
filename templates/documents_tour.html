@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoinUP!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/panel.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/tarifs.css">
+    <link rel="stylesheet" href="/static/faq.css">
+    <link rel="shortcut icon" href="/static/main.png" type="image.png">
+</head>
+{% block header %}{% endblock %}
+<body>
+  <div style="margin-top: 300px;"></div>
+  <header style="display: flex; justify-content: center;">
+  </body>
+    <div class="answer">
+        <h4>Зазвичай, для подорожі за кордон вам потрібен паспорт та віза. Інформація про вимоги до документів може відрізнятися в залежності від країни призначення. Якщо потрібно - ми надамо всю необхідну інформацію та допоможемо в оформленні візи. Просто залиште вашу заявку для менеджерів в <a href="/help">технічній підтримці</a>.</h4>
+    </div>
+  </header>
+  <body>
+    <div class="container6">
+      <a href="/have_tour" class="visit">
+        <div class="div_vis" style="margin-top: 0px;"><div class="ptext">Як дізнатися про наявні тури і подорожі, які пропонує ваша компанія?</div></div>
+    </a>
+    </div>
+  <div class="container6">
+    <a href="/cost_tarifs" class="visit">
+      <div class="div_vis" style="margin-top: 20px;"><div class="ptext1">Як дізнатися про вартість туру та що вона включає?</div></div>
+  </a>
+  </div>
+  <div class="container6">
+    <a href="/save_tour" class="visit">
+      <div class="div_vis" style="margin-top: 20px;"><div class="ptext1">Чи можливе страхування під час подорожі?</div></div>
+  </a>
+  </div>
+  <div class="container6">
+    <a href="/problems_tour" class="visit">
+      <div class="div_vis" style="margin-top: 20px;"><div class="ptext1">Як вирішити проблеми під час подорожі?</div></div>
+  </a>
+  </div>
+  <div class="container6">
+    <a href="/change_armor" class="visit">
+      <div class="div_vis" style="margin-top: 20px;"><div class="ptext1">Чи можна змінити або скасувати бронювання?</div></div>
+  </a>
+  </div>
+  <div class="container6">
+    <a href="/individuality" class="visit">
+      <div class="div_vis" style="margin-top: 20px;"><div class="ptext1">Чи можливий індивідуальний маршрут чи замовлення спеціальних послуг?</div></div>
+  </a>
+  </div>  
+  <div style="margin-top: 20px;"></div> 
+  </body>
+</html>
+{% extends "base.html" %}

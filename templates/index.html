@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoinUP!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/panel.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/tarifs.css">
+    <link rel="shortcut icon" href="/static/main.png" type="image.png">
+</head>
+{% block header %}{% endblock %}
+<body>
+  <div style="margin-top: 300px;"><p1 class="p1_global">ПОДОРОЖУЙ!</p1></div>
+  <div style="margin-bottom: 400px;"><p1 class="p2_global">ВОНО ТОГО КОШТУЄ!</p1></div>
+  <div class="arrow"><img src="/static/arrow.png" width="64px" height="64px"></div>
+  <div class="flex-container">
+  <div class="pos_div1">
+    <div class="hover-text-one">
+        <figure class="effect-text-three">
+            <img class="img_back1" src="/static/karpats.png" alt=""/>
+            <figcaption>
+            <h3>Карпати</h3>
+            <p>Ціна: від 1450 грн</p>
+            <p>Житло: Готель/Хостел</p>
+            <p>Час: від 3 до 60 діб</p>
+            <p>Транспорт: Автобус/Потяг</p>
+            <form action="/karpats"><p><button class="but_buy">Придбати</button></p></form>
+            </figcaption>			
+        </figure>
+    </div>
+    </div>
+    <div class="pos_div2">
+        <div class="hover-text-one">
+            <figure class="effect-text-three">
+              <img class="img_back2" src="/static/faroe.png" alt=""/>
+              <figcaption>
+              <h3>Фарери</h3>
+              <p>Ціна: від 6900 грн</p>
+              <p>Житло: Готель/хостел</p>
+              <p>Час: від 3 до 60 діб</p>
+              <p>Транспорт: Паром/Літак</p>
+              <form action="/faroe_island"><p><button class="but_buy">Придбати</button></p></form>
+                </figcaption>			
+            </figure>
+        </div>
+    </div>
+    <div class="pos_div3">
+    <div class="hover-text-one">
+        <figure class="effect-text-three">
+            <img class="img_back3" src="/static/switzerland.png" alt=""/>
+            <figcaption>
+            <h3>Швейцарія</h3>
+            <p>Ціна: від 5600 грн</p>
+            <p>Житло: Хостел/готель</p>
+            <p>Час: від 3 до 60 діб</p>
+            <p>Транспорт: Автобус/Потяг/Літак</p>
+            <form action="/switzerland"><p><button class="but_buy">Придбати</button></p></form>
+            </figcaption>			
+        </figure>
+    </div>
+    </div>
+  </div>
+  <div class="flex-container">
+    <div class="pos_div1">
+      <div class="hover-text-one">
+          <figure class="effect-text-three">
+              <img class="img_back1" src="/static/iceland.png" alt=""/>
+              <figcaption>
+              <h3>Ісландія</h3>
+              <p>Ціна: від 8400 грн</p>
+              <p>Житло: хостел/готель</p>
+              <p>Час: від 3 до 60 діб</p>
+              <p>Транспорт: Паром/Літак</p>
+              <form action="/iceland"><p><button class="but_buy">Придбати</button></p></form>
+              </figcaption>			
+          </figure>
+      </div>
+      </div>
+      <div class="pos_div2">
+          <div class="hover-text-one">
+              <figure class="effect-text-three">
+                <img class="img_back2" src="/static/poland.png" alt=""/>
+                <figcaption>
+                <h3>Польща</h3>
+                <p>Ціна: Від 3300 грн</p>
+                <p>Житло: хостел/готель</p>
+                <p>Час: від 3 до 60 діб</p>
+                <p>Транспорт: Автобус/Потяг</p>
+                <form action="/poland"><p><button class="but_buy">Придбати</button></p></form>
+                  </figcaption>			
+              </figure>
+          </div>
+      </div>
+      <div class="pos_div3">
+      <div class="hover-text-one">
+          <figure class="effect-text-three">
+              <img class="img_back3" src="/static/sweden.png" alt=""/>
+              <figcaption>
+              <h3>Швеція</h3>
+              <p>Ціна: Від 9500 грн</p>
+              <p>Житло: хостел/готель</p>
+              <p>Час: від 3 до 60 діб</p>
+              <p>Транспорт: Автобус/Потяг/Літак</p>
+              <form action="/sweden"><p><button class="but_buy">Придбати</button></p></form>
+              </figcaption>			
+          </figure>
+      </div>
+      </div>
+  </div>
+  </body>
+</html>
+{% extends "base.html" %}

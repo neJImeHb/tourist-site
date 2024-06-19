@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoinUP!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/panel.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/tarifs.css">
+    <link rel="shortcut icon" href="/static/main.png" type="image.png">
+</head>
+{% block header %}
+{% endblock %}
+<body>
+    <h1 style="color: white; text-align: center; margin-top: -150px;">ПОВІДОМЛЕННЯ:</h1>
+    <div style="display: flex; justify-content: center; ">
+    {% if user_queries %}
+    <div style="margin-top: 20px;">
+        {% for query in user_queries %}
+            {% if query.h_answer != None %}
+            <div class="cus_div">
+                <h4 style="color: white; margin-bottom: 0; padding: 0; display: inline;">Адміністратор</h4>
+                <h4 style="color: rgb(255, 255, 0); margin-bottom: 0; padding: 0; display: inline;">{{ query.h_admin_name_1 }} {{ query.h_admin_name_2 }}</h4>
+                <h4 style="color: white; margin-bottom: 0; padding: 0; display: inline;">відповів на ваш запит за темою:</h4>
+                <h4 style="color: rgb(255, 191, 0); margin-bottom: 0; padding: 0; display: inline;">"{{ query.h_theme }}"</h4>
+                <div style="margin-top: 10px;"><a href="/requests_help/{{ query.id }}" class="btn btn-warning">Детальніше</a></div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% else %}
+    <p style="color: white; text-align: center;">Нічого не знайдено.</p>
+{% endif %}
+</body>
+{% extends "base.html" %}

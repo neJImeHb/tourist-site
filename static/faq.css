@@ -1,0 +1,45 @@
+.visit{
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-family: cursive;
+}
+
+.div_vis{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(175, 175, 175, 0.2);
+    height: 80px;
+    width: 800px;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+.div_vis:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+div.container6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.answer{
+    display: flex; 
+    justify-content: center; 
+    text-align: center;
+    width: 800px;
+    margin-top: -200px;
+    color: white;
+    font-family: cursive;
+    position: absolute;
+}
+body{
+    text-align: center;
+}
+

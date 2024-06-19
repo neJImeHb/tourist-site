@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if place %}
+    {% for query in place %}
+      <title>{{ query.p_name }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/panel.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/tarifs.css">
+    <link rel="stylesheet" href="/static/buy.css">
+    <link rel="shortcut icon" href="/static/main.png" type="image.png">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+{% block header %}{% endblock %}
+<body>
+  <form id="myForm" method="post" action="{{ url_for('order', id=query.id) }}">
+  <h1 class="main_text">ОФОРМЛЕННЯ ЗАМОВЛЕННЯ</h1>
+  <div class="pos_m1">
+  <div class="m_1"><h4>Житло</h4></div>
+  <div class="menu_1">
+    <select id="o_house" data-target="#selectedHouse" data-prefix="" name="o_house" required="required" style="background-color: rgb(255, 165, 165); border: none; width: 181px;">
+    <option value="0">Зробіть вибір:</option>
+    <option value="Хостел" price="1100">Хостел (1100₴/доба)</option>
+    <option value="Готель" price="2000">Готель (2000₴/доба)</option>
+  </select>
+</div>
+</div>
+<div class="pos_m">
+  <div class="m_1"><h4>Час</h4></div>
+    <div class="menu_1">
+      <select id="o_time" data-target="#selectedTime" data-prefix="" name="o_time" required="required" style="background-color: rgb(255, 165, 165); border: none; width: 181px;">
+      <option value="0">Зробіть вибір:</option>
+      <option value="3 доби" price="3">3 доби</option>
+      <option value="7 діб" price="7">7 діб</option>
+      <option value="14 діб" price="14">14 діб</option>
+      <option value="30 діб" price="30">30 діб</option>
+      <option value="60 діб" price="60">60 діб</option>
+    </select>
+  </div>
+  </div>
+<div class="pos_m">
+<div class="m_1"><h4>Особи</h4></div>
+  <div class="menu_1">
+    <select id="o_people" data-target="#selectedPeople" data-prefix="" name="o_people" required="required" style="background-color: rgb(255, 165, 165); border: none; width: 181px;">
+    <option value="0">Зробіть вибір:</option>
+    <option value="Сам" price="1">Сам</option>
+    <option value="Дві" price="2">Дві</option>
+    <option value="Три" price="3">Три</option>
+    <option value="Чотири" price="4">Чотири</option>
+    <option value="П'ять" price="5">П'ять</option>
+  </select>
+</div>
+</div>
+<div class="pos_m">
+  <div class="m_1"><h4>Транспорт</h4></div>
+    <div class="menu_1">
+      <select id="o_transport" data-target="#selectedTransport" data-prefix="" name="o_transport" required="required" style="background-color: rgb(255, 165, 165); border: none; width: 181px;">
+      <option value="0">Зробіть вибір:</option>
+      <option value="Паром" price="3000">Паром (3000₴)</option>
+      <option value="Літак" price="4800">Літак (4800₴)</option>
+    </select>
+  </div>
+  </div>
+  </body>
+  <body>
+    <div class="check">
+      <div style="text-align: center;"><a class="a_1">ВАШЕ ЗАМОВЛЕННЯ</a></div>
+      <div style="margin-top: 20px;"><a class="a_2">Житло: </a><a id="selectedHouse" class="a_f1">0₴/доба</a></div>
+      <div style="margin-top: 20px;"><a class="a_3">Час: </a><a id="selectedTime" class="a_f2">0₴</a></div>
+      <div style="margin-top: 20px;"><a class="a_3">Особи: </a><a id="selectedPeople" class="a_f2">0₴</a></div>
+      <div style="margin-top: 20px;"><a class="a_4">Транспорт: </a><a id="selectedTransport" class="a_f3">0₴</a></div>
+      <div style="text-align: center; margin-top: 60px;"><a class="a_6">РАЗОМ</a></div>
+      <div style="text-align: center;"><a id="resultLink4" class="a_f5">0₴</a></div>
+      <input type="hidden" id="order_sum" name="o_sum" value="0₴">
+      <div style="width: 400px;"><button class="button_buy" type="submit">Оформити замовлення</button></div>
+    </div>
+  </form>
+  </body>
+  <script src="/static/main.js"></script>
+  {% endfor %}
+  {% endif %}
+</html>
+{% extends "base.html" %}

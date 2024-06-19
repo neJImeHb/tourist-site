@@ -1,0 +1,128 @@
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(to top, #000000, #535353);
+    margin-top: 300px;
+}
+.name_text{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+.header_text{
+    margin-left: 10px;
+}
+.text-end{
+    margin-right: 15px;
+}
+.copyright{
+    position: absolute;
+    bottom: 0%;
+}
+.contacts{
+    color:white;
+    text-decoration: none;  
+    margin-left: 200px;
+    background: none;
+}
+.but_buy{
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.8);
+    font-size: 20px;
+    margin-left: -3px;
+	color: #fff;
+	text-transform: uppercase;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+    text-decoration: underline
+}
+.p1_global{
+    font-style: italic;
+    font-size: 80px;
+    font-family: sans-serif;
+    font-weight: 900;
+     text-shadow: 0 0 2px #fff;
+    color: #0A0718;
+    margin-left: 100px;
+}
+.p2_global{
+    font-style: italic;
+    font-size: 80px;
+    font-family: sans-serif;
+    font-weight: 900;
+    color: #ffffff;
+    margin-left: 100px;
+}
+@supports (-webkit-text-stroke: 1px white) {
+    .p1_global {
+      text-shadow: none;
+      color: transparent;
+      -webkit-text-stroke: 1px #fff;
+    }
+  }
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #535353 #202020;
+}
+.custom-border{
+    border-bottom: 1px solid white;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+.arrow{
+    position: absolute;
+    margin-top: -490px;
+    margin-left: 1200px;
+}
+.but_1, .but_2, .but_3 {
+    background: none;
+    border: none;
+    color: white;
+}
+
+.but_1 {
+    margin-right: 20px;
+}
+
+.but_3 {
+    margin-left: 20px;
+}
+
+.div_but {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.form_wrapper {
+    display: inline-block; 
+}
+
+form {
+    margin: 0;
+}
+.account{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    height: 50px;
+    margin-right: 10px;
+    margin-top: 0px;
+    display:inline-block;
+}
+.cus_div{
+    background-color: rgba(34, 34, 34, 0.328); 
+    margin-bottom: 20px;
+    padding: 10px; 
+    width: 700px; 
+    border-radius: 5px; 
+    overflow:hidden;
+    overflow-wrap: break-word;
+    word-wrap: break-word; 
+    overflow: auto;
+}
+.text_shadow {
+    color: #f1c40f;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px #F3E7CF, -1px -1px #ffe600;
+}   

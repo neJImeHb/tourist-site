@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoinUP!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/panel.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/tarifs.css">
+    <link rel="stylesheet" href="/static/font.css">
+    <link rel="shortcut icon" href="/static/main.png" type="image.png">
+</head>
+{% block header %}
+{% endblock %}
+<body>
+    <h1 class="text_shadow" style="color: white; text-align: center; margin-top: -150px;">ВИ АВТОРИЗОВАНІ</h1>
+    <div style="text-align: center; margin-top: 20px;"><a class="double-border-button" style="font-family: cursive;">Ваше ім'я: {{ current_user.name_1 }} {{ current_user.name_2 }} {{ current_user.name_3 }}</a></div>
+    <div style="text-align: center; margin-top: 0px;"><a class="double-border-button" style="font-family: cursive;">Email: {{ current_user.email }}</a></div>
+    {% if current_user.is_authenticated and current_user.email == "viktorvoytovich2008@gmail.com" %}
+    <div style="text-align: center; margin-top: 40px;"><a class="double-border-button" style="font-family: cursive;" href="admin">Панель адміністратора</a></div>
+    {% else %}
+    <div style="margin-top: 40px;"></div>
+    {% endif %}
+    <div style="text-align: center; margin-top: 0px;"><a class="double-border-button" style="font-family: cursive;" href="requests_help">Мої запити в Тех. Підтримці</a></div>
+    <div style="text-align: center; margin-top: 0px;"><a class="double-border-button" style="font-family: cursive;" href="order_history">Мої замовлення</a></div>
+    <div style="text-align: center; margin-top: 0px;"><a class="double-border-button" style="color: rgb(255, 119, 119); font-family: cursive;" href="{{url_for('logout')}}">Вийти з аккаунту</a></div>
+</body>
+{% extends "base.html" %}

@@ -1,0 +1,82 @@
+.check{
+    position: relative;
+    height: 500px;
+    width: 400px;
+    background-color: rgb(58, 58, 58);
+    box-shadow: 10px 10px 10px rgb(0, 0, 0);
+    margin: 0px 100px 0px auto;
+    margin-top: -400px;
+}
+.a_1, .a_2, .a_3, .a_4, .a_5, .a_6, .a_f1, .a_f2, .a_f3, .a_f4, .a_f5{
+    color: white;
+    text-decoration: none;
+    font-family: cursive;
+}
+.a_1{
+    font-size: 30px;   
+}
+.a_2{
+    font-size: 20px;
+    margin-left: 20px;
+}
+.a_3{
+    font-size: 20px;
+    margin-left: 20px;
+}
+.a_4{
+    font-size: 20px;
+    margin-left: 20px;
+}
+.a_5{
+    font-size: 20px;
+    margin-left: 20px;
+}
+.a_6{
+    font-size: 25px;   
+}
+.a_f1, .a_f2, .a_f3, .a_f4{
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+}
+.a_f5{
+    font-size: 50px;
+}
+.button_buy{
+    position: absolute;
+    background: rgba(234, 234, 84, 0.653);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    bottom: 20px;
+    width: 360px;
+    height: 40px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: cursive;
+}
+.m_1{
+    margin-left: 100px;
+    font-family: cursive;
+}
+.m_1{
+    color: rgb(255, 255, 255);
+    position: absolute;
+}
+.menu_1{
+    margin-left: 555px;
+    font-family: cursive;
+}
+option.menu_1{
+    color: white;
+}
+.main_text{
+    position: absolute;
+    font-family: cursive;
+    color: white;
+    margin-top: -150px;
+    margin-left: 100px;
+}
+.pos_m{
+    margin-top: 50px;
+}
